@@ -10,7 +10,6 @@ namespace BankAccountTest
 			
 		}
 
-		public IEnumerable<IOperation> Operations { get; private set; }
 		public void StoreWithdraw(int amount)
 		{
 			

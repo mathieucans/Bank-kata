@@ -6,7 +6,7 @@ namespace BankAccount
 		int Amount { get; set; }
 	}
 
-	public enum OperationType	
+	public enum		OperationType	
 	{
 		Deposit
 	}

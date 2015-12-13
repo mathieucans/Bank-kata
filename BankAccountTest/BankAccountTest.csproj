@@ -42,6 +42,7 @@
       <HintPath>..\References\FakeItEasy.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -58,8 +59,13 @@
   <ItemGroup>
     <Compile Include="AcceptanceTest.cs" />
     <Compile Include="AccountServiceShould.cs" />
+    <Compile Include="AccountStatementShould.cs" />
     <Compile Include="OperationServiceShould.cs" />
+    <Compile Include="PrinterVisitorShould.cs" />
+    <Compile Include="PrintServiceShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatementLineShould.cs" />
+    <Compile Include="StatementProviderShould.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BankAccount\BankAccount.csproj">

@@ -9,10 +9,12 @@ namespace BankAccountTest
 	[TestClass]
 	public class AcceptanceTest
 	{
+		private static AcceptancePrinter _acceptancePrinter;
+
 		[TestMethod]
 		public void AnAcceptanceTest()
 		{
-			List<string> output = new List<string>();
+			List<string> output = _acceptancePrinter.Lines;
 			
 			var service = Create();
 			service.Deposit(1000);
@@ -31,10 +33,28 @@ namespace BankAccountTest
 
 		private static AccountService Create()
 		{
-			var service = new AccountService(new OperationService(), new PrintService());
+			_acceptancePrinter = new AcceptancePrinter();
+			var service = new AccountService(new OperationService(), new PrintService(_acceptancePrinter, new StatementProvider(new TransactionProvider())));
 			return service;
 		}
 	}
 
 	
+
+
+	internal class AcceptancePrinter
+		: IPrinter
+	{
+		public AcceptancePrinter()
+		{
+			Lines = new List<string>();
+		}
+
+		public List<string> Lines { get; private set; }
+
+		public void WriteLine(string dateAmountBalance)
+		{
+			Lines.Add(dateAmountBalance);
+		}
+	}
 }

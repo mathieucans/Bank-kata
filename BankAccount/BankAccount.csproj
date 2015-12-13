@@ -42,14 +42,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountService.cs" />
+    <Compile Include="AccountStatement.cs" />
+    <Compile Include="DepositTransaction.cs" />
     <Compile Include="IAccountService.cs" />
+    <Compile Include="IAccountStatement.cs" />
+    <Compile Include="IAccountTransaction.cs" />
     <Compile Include="IOperation.cs" />
     <Compile Include="IOperationService.cs" />
+    <Compile Include="IPrinter.cs" />
     <Compile Include="IPrintService.cs" />
+    <Compile Include="IStatementItem.cs" />
+    <Compile Include="IStatementProvider.cs" />
+    <Compile Include="IStatementVisitor.cs" />
+    <Compile Include="ITransactionProvider.cs" />
     <Compile Include="OperationService.cs" />
+    <Compile Include="PrinterVisitor.cs" />
     <Compile Include="PrintService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatementBuilder.cs" />
+    <Compile Include="StatementLine.cs" />
+    <Compile Include="StatementProvider.cs" />
+    <Compile Include="TransactionProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

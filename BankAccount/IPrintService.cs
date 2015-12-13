@@ -4,6 +4,6 @@ namespace BankAccount
 {
 	public interface IPrintService
 	{
-		void Print(IEnumerable<IOperation> operationList);
+		void PrintStatement();
 	}
 }

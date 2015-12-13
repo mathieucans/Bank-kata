@@ -1,10 +1,10 @@
-﻿using System.Linq;
+using System.Linq;
 using BankAccount;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BankAccountTest
 {
-	[TestClass]
+	/*[TestClass]
 	public class OperationServiceShould
 	{
 		[TestMethod]
@@ -18,5 +18,5 @@ namespace BankAccountTest
 			Assert.AreEqual(OperationType.Deposit, lastOperation.Type);
 			Assert.AreEqual(amount, lastOperation.Amount);
 		}
-	}
+	}*/
 }

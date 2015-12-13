@@ -5,9 +5,7 @@
 		private IOperationService _operationService;
 		private IPrintService _printService;
 
-		public AccountService(
-			IOperationService operationService, 
-			IPrintService printService)
+		public AccountService(IOperationService operationService, IPrintService printService)
 		{
 			_operationService = operationService;
 			_printService = printService;
@@ -25,7 +23,7 @@
 
 		public void PrintStatement()
 		{
-			_printService.Print(_operationService.Operations);
+			_printService.PrintStatement();
 		}
 	}
 }
